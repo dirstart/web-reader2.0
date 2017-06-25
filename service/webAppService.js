@@ -3,11 +3,12 @@ var qs=require('querystring');
 var http=require('http');
 //文件系统，像python一样
 
+// 方法一.获取本地的mock数据
 exports.get_test_data=function(){
 	var content=fs.readFileSync('./mock/test.json','utf-8');
 	return content;
 };
-
+// 方法二.利用线上的接口获取数据
 exports.get_search_data=function(start,end,keyword){
 	return function(callback){
 		//object对象转成
@@ -42,3 +43,8 @@ exports.get_search_data=function(start,end,keyword){
 		req_obj.end();//发送这个请求
 	};
 };
+
+exports.get_index_data=function(){
+	var content=fs.readFileSync('./mock/home.json','utf-8');
+	return content;
+}
