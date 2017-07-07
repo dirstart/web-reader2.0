@@ -1,40 +1,14 @@
-var koa=require('koa');
-var koa_static=require('koa-static-server');
-var controller=require('koa-route');
-var service=require('./service/webAppService.js');
-var app=new koa();
-var views=require('co-views');
-//模板引擎
-var render=views('./view',{
-	map:{ html:'ejs'}
-});
-app.use(koa_static({
-	rootDir:'./static/',
-	rootPath:'/s/',
-	// 下面没有点，因为这个是url之中的路径，就是网址中的路径
-	maxage:0
-	//静态文件都有缓存，为了性能
-}));
+let express=require('express');
+let app=express();
+let ejs=require('ejs');
+let indexRouter=require('./route/indexRouter');
 
-app.use(controller.get('/route_test',function*(){
-	this.set('Cache-Control','no-cache');
-	this.body='hello';
-	console.log("route_test is success");
-}));
-app.use(controller.get('/ejs_test',function*(){
-	this.body=yield render('test',{title:'hhh'});
-}));
-app.use(controller.get('/api_test',function*(){
-	this.body=service.get_test_data();
-}));
-app.use(controller.get('/ajax/search',function*(){
-	this.set('Cache-Control','no-cache');
-	var querystring=require('querystring');
-	var params=querystring.parse(this.req._parsedUrl.query);
-	// 把参数解析成object
-	var start=params.start;
-	var end=params.end;
-	var keyword=params.keyword;
-	this.body=yield service.get_search_data(start,end,keyword);
-}));
+app.use(indexRouter);
+// app.use(express.static('static'));说明默认就是+了__dirname(本地路径)
+// 通常来说静态文件都有它的缓存周期
+app.use(express.static(__dirname+"/static"));
+app.set('views','./views/pages');
+// 设置视图的目录
+app.engine('html',ejs.__express);
+app.set('view engine','html');
 app.listen(3000);
