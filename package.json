@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/dirstart/Web-Reader2.0#readme",
   "devDependencies": {
+    "browser-sync": "^2.18.12",
     "ejs": "^2.5.6",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1"
   }
 }

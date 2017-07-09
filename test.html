@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// var promise=new Promise((resolve)=>{
+// 	console.log("inner promise");
+// 	resolve(42);
+// });
+
+// promise.then(function(value){
+// 	console.log(value);
+// });
+
+// console.log("outer promise");
+
+// var init_age=0;
+// function life(people, age, callback) {
+// 	setTimeout(function() {
+// 			if (init_age < age) {
+// 				init_age++;
+// 				console.log(people+'\'s age is:' +init_age);
+// 				life(people,age,callback);
+// 			} else {
+// 				init_age=0;//归零
+// 				console.log(people +" is a boy");
+// 				callback();
+// 			}
+// 		},500);
+// }
+// life('chen',7,function(){
+// 	life('li',8,function(){
+// 		life('liu',6,function(){
+// 			console.log("the last");
+// 		})
+// 	})
+// })
+
+var init_age=0;
+function life_promise(people, age) {
+	return new Promise(function(resolve, reject) {
+		function life(people, age) {
+			setTimeout(function() {
+				if (init_age < age) {
+					init_age++;
+					console.log(people+'\'s age is:' +init_age);
+					life(people,age);
+				} else {
+					resolve();
+					init_age=0;
+				}
+			},500);
+		};
+		life(people,age);
+	});
+};
+
+life_promise('chen',7)
+	.then(function(){
+		return life_promise('li',8);
+	})
+	.then(function(){
+		return life_promise('liu',6);
+	})
+	.then(function(){
+		console.log("the last");
+	});
+
+
+
+	</script>
+</body>
+</html>
