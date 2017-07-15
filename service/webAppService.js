@@ -43,7 +43,7 @@ let get_book_data = (id) => {
 	if (!id) {
 		id = "18218"
 	}
-	var content = fs.readFileSync('./mock/book/' + id + '.html', 'utf-8');
+	var content = fs.readFileSync('./mock/book/' + id + '.json', 'utf-8');
 	return content;
 }
 
