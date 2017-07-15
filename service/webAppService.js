@@ -3,37 +3,54 @@ let qs = require('querystring');
 let http = require('http');
 
 let get_json_data = () => {
-	let content = fs.readFileSync('./mock/test.json', 'utf-8');
+	let content = fs.readFileSync('./mock/reader/test.json', 'utf-8');
 	return content;
 };
 
-var get_search_data = function(start, end, keyword) {
-	var data = {
+let get_index_data = () => {
+	let content = fs.readFileSync('./mock/reader/home.json', 'utf-8');
+	return content;
+}
+
+let get_search_data = (start, end, keyword, fn) => {
+	let data = {
 		s: keyword,
 		start: start,
 		end: end
 	};
 	data = qs.stringify(data);
-	var http_request = {
+	let http_request = {
 		host: 'dushu.xiaomi.com',
 		port: 80,
 		path: '/store/v0/lib/query/onebox?' + data
 	}
 	http.request(http_request, function(_res) {
-		var content = '';
+		let content = '';
 		_res.setEncoding('utf-8');
 		_res.on('data', function(chunk) {
 			content += chunk;
 		});
 		_res.on('end', function() {
-			console.log(content);
-			//请求到数据了哈哈哈哈哈哈
-			return content;
+			return fn(content);
 		});
 	}).end();
+};
+let get_rank_data = () => {
+	var content = fs.readFileSync('./mock/reader/rank.json', 'utf-8');
+	return content;
+}
+let get_book_data = (id) => {
+	if (!id) {
+		id = "18218"
+	}
+	var content = fs.readFileSync('./mock/book/' + id + '.html', 'utf-8');
+	return content;
 }
 
 module.exports = {
 	GetJsonData: get_json_data,
-	GetSearchData: get_search_data
+	GetSearchData: get_search_data,
+	GetIndexData: get_index_data,
+	GetRankData: get_rank_data,
+	GetBookData: get_book_data
 };
