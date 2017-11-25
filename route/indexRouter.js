@@ -26,6 +26,7 @@ router.get('/', (req, res) => {
 	res.render('index', {
 		title: '千叶书城'
 	})
+	// res.send('index');
 });
 
 router.get('/search', (req, res) => {
@@ -37,6 +38,7 @@ router.get('/search', (req, res) => {
 router.get('/book', (req, res) => {
 	res.setHeader('Cache-Control', 'no-cache');
 	let params = qs.parse(req._parsedUrl.query);
+	console.log(params);
 	let book_id = params.id;
 	res.render('book', {
 		book_id: book_id

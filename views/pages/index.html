@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/all.css">
 	<title><%= title%></title>
 </head>
 <body>
-	
+	<div id="root">
+   <%- include('../include/header.html') %> 
+   <div>
+    <%- include('../include/index-top.html') %> 
+    <%- include('../include/index-hot.html') %>
+    <%- include('../include/index-recommend.html') %>
+    <%- include('../include/index-male.html') %>
+    <%- include('../include/index-free.html') %>
+    <%- include('../include/index-bottom.html') %>
+   </div>
+  </div>
 </body>
+  <script src="js/vue.min.js"></script>
+  <script src="js/zepto.min.js"></script>
+  <script src="js/index.js"></script>
 </html>
+
