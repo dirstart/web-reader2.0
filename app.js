@@ -16,5 +16,3 @@ app.set('view engine', 'html');
 
 
 app.listen(3000);
-
-// 此条为了测试在另外一台电脑上是否需要密钥.
