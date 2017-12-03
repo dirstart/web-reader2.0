@@ -10,7 +10,7 @@ gulp.task('serve',function(){
 		notify:false,
 		port:3001
 	});
-	let hot_files=['./views/*.html','./views/pages/*.html'];
+	let hot_files=['./views/*.html','./views/pages/*.html','./views/include/*.html'];
 	gulp.watch(hot_files).on('change',reload);
 });
 gulp.task('node_app',function(){
