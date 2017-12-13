@@ -2,10 +2,10 @@
   <div class="swipe-tab swipe-tab-2 clearfix">
     <a href="javascript:">书城</a>
     <a href="javascript:">书架</a>
-    <i style="transition-duration:0s;transform:translate3d(0px,0px,0px);"></i>
+    <i class="line" style="transition-duration:0s;transform:translate3d(0px,0px,0px);"></i>
   </div>
-  <em class="header-user"></em>
-  <em class="header-checkin"></em>
+  <i class="iconfont icon-qiandao header-checkin"></i>
+  <i class="iconfont icon-gerenzhongxin header-user"></i>
 </div>
 
 <style>
@@ -17,10 +17,14 @@
     border-bottom: 1px solid #ddd;
     position: relative;
   }
-  .header-tab i {
+  .header-tab .line {
+    position: absolute;
+    width: 50%;
+    left: 0;
+    -webkit-transition:-webkit-transfrom .3s ease-out;
     bottom: -1px;
   }
-  .header-tab i:before {
+  .header-tab .line:before {
     content: '';
     display: block;
     height: 2px;
@@ -42,29 +46,29 @@
     text-align: center;
     -webkit-tap-highlight-color: rgba(0, 0, 0);
   }
-  .swipe-tab i {
-    position: absolute;
-    width: 50%;
-    left: 0;
-    -webkit-transition:-webkit-transfrom .3s ease-out;
-  }
   .swipe-tab-2 a {
     width: 50%;
   }
-  .header-user {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 44px;
-    height: 44px;
-    background-color: #089e8a;
-  }
   .header-checkin {
     position: absolute;
+    margin-right: 30px;
+    font-size: 21px;
+    right: 0;
+    top: 0;
+  }
+  .header-user {
+    position: absolute;
+    margin-left: 30px;
+    font-size: 25px;
     left: 0;
     top: 0;
-    width: 44px;
-    height: 44px;
-    background-color: #089e8a;
+  }
+  .clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
   }
 </style>

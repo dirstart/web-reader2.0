@@ -22,6 +22,7 @@ router.get('/api_test', (req, res) => {
 	res.send(service.GetJsonData());
 });
 
+// 首页
 router.get('/', (req, res) => {
 	res.render('index', {
 		title: '千叶书城'
@@ -29,10 +30,18 @@ router.get('/', (req, res) => {
 	// res.send('index');
 });
 
+// 搜索页
 router.get('/search', (req, res) => {
 	res.render('search', {
 		title: '搜索一下'
 	})
+});
+
+// 分类页
+router.get('/category', (req, res) => {
+	res.render('category', {
+		title: '分类'
+	});
 });
 
 router.get('/book', (req, res) => {

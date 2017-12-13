@@ -4,16 +4,32 @@
     <div class="home-search">输入书名/作者/关键字</div>
   </a>
 <!-- 轮播页 -->
-  <div class="slider-banner">
+  <div class="home-slider">
     <div>
       <a href="http://dushu.xiaomi.com/#page=channel&id=410">
-        <img src="" alt="">
-        <div>123</div>
+        <img src="img/6.jpg" alt="" class="slider-pic">
       </a>
     </div>
   </div>
 <!-- 横向列表标签 -->
-  <ul></ul>
+  <ul class="home-nav">
+    <li class="nav-item"><a href="/male">
+      <i class="iconfont icon-nansheng item-icon"></i>
+      <span class="item-text">男生</span>
+    </a></li>
+    <li class="nav-item"><a href="/female">
+      <i class="iconfont icon-nvsheng item-icon"></i>
+      <span class="item-text">女生</span>
+    </a></li>
+    <li class="nav-item"><a href="/category">
+      <i class="iconfont icon-leimupinleifenleileibie item-icon"></i>
+      <span class="item-text">分类</span>
+    </a></li>
+    <li class="nav-item"><a href="/rank">
+      <i class="iconfont icon-paixing-copy item-icon"></i>
+      <span class="item-text">排行</span>
+    </a></li>
+  </ul>
 </section>
 
 <style>
@@ -27,9 +43,52 @@
     color: rgba(0, 0, 0, 0.4);
     background-position: center; 
     /*background-size: 14px;*/
-    /*此处需要一张背景图*/
+    /*一个搜索button图，之后在想如何实现会比较好*/
     border: 1px solid #f5f5f5;
     border-radius: 2px;
-    font: 12px/23px arial;
+    font: 10px/23px arial;
+  }
+  .home-slider {
+  }
+  .slider-pic {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+  .home-nav {
+    display: flex;
+  }
+  .nav-item {
+    margin-right: 10px;
+    flex: 1;
+    /*background-color: #999;*/
+    text-align: center;
+    line-height: 22px;
+    font-size: 16px;
+  }
+  .item-icon,
+  .item-text {
+    display: block;
+  }
+  .item-text {
+    font-size: 10px;
+  }
+  .item-icon {
+    font-weight: 700;
+  }
+  .icon-nansheng {
+    color: #4C24EA;
+  }
+  .icon-nvsheng {
+    color: #DE7DCF;
+  }
+  .icon-paixing-copy {
+    color: #5BC717;
+  }
+  .icon-leimupinleifenleileibie {
+    color: #EBAC21;
+  }
+  .nav-item:last-child {
+    margin-right: 0;
   }
 </style>
