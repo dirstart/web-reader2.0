@@ -44,6 +44,27 @@ router.get('/category', (req, res) => {
 	});
 });
 
+// 男生页
+router.get('/male', (req, res) => {
+	res.render('male', {
+		title: "男生"
+	});
+});
+
+// 女生页
+router.get('/female', (req, res) => {
+	res.render('female', {
+		title: "女生"
+	})
+});
+
+// 排行页面
+router.get('/rank', (req, res) => {
+	res.render('rank', {
+		title: "排行"
+	})
+});
+
 router.get('/book', (req, res) => {
 	res.setHeader('Cache-Control', 'no-cache');
 	let params = qs.parse(req._parsedUrl.query);
