@@ -3,15 +3,132 @@
     background-color: #fff;
     border-bottom: 10px solid #f5f5f5;
     position: relative;
-  }  
+  }
+  .channel-header {
+    position: relative;
+    padding: 15px 13px 14px 13px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .header-text {
+    position: relative;
+    font: bold 13px/13px a;
+    color: rgba(0, 0, 0, 0,9);
+  }
+  .text-icon {
+    position: absolute;
+    margin: -5px 0 0 5px;
+    padding: 3px 5px;
+    font: 9px/9px a;
+    color: #fff;
+    background-color: #53ac7d;
+    border-radius: 1px;
+  }
+  .re-header-tab {
+    position: absolute;
+    right: 13px;
+    top: 9px;
+  }
+  .re-header-tab a {
+    display: inline-block;
+    position: relative;
+    padding: 16px 7px;
+    font: 12px/12px a;
+    color: #999;
+  }
+  .re-header-tab a:first-child:after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    bottom: 16px;
+    right: -3px;
+    width: 1px;
+    border-right: 1px solid #ccc;
+  }
+  .re-header-tab a:last-child {
+    padding-right: 0;
+  }
+  .re-header-tab .current {
+    color: #528ae8;
+  }
+  .book-list {
+    padding: 0 13px;
+    overflow: hidden;
+  }
+  .book-list li {
+    padding: 17px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .book-list li:last-child {
+    border-bottom: none;
+  }
+  .book-list .book-cover {
+    overflow: hidden;
+  }
+  .book-cover .cover-image {
+    float: left;
+    position: relative;
+    width: 85px;
+    height: 113px;
+    background-color: #eeeec9;
+    border: 1px solid #f0f0f0;
+    overflow: hidden;
+  }
+  .book-cover .cover-image img {
+    width: 100%;
+    height: 100%;
+  }
+  .book-cover .cover-image .image-info {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    color: #fff;
+    padding: 25px 7px 6px;
+    font: 10px/10px a;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.3));
+  }
+  .book-cover .cover-info {
+    margin-left: 100px;
+    background-color: #fff;
+    padding-top: 6px;
+  }
+  .book-cover .cover-info .info-title {
+    width: 100px;
+    margin-bottom: 4px;
+    font: 16px/17px a;
+    color: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .book-cover .cover-info .info-author {
+    width: 100px;
+    margin-top: 8px;
+    font: 12px/12px a;
+    color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  /* 以上两行都是单行文字溢出 */
+  .book-cover .cover-info .info-summary {
+    margin-top: 8px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.6);
+    height: 2.8em;
+    font: 12px/1.4em arial;
+  }
+  /* 这里是简介的部分，需要的是多行文字溢出 */
 </style>
-<section class="channel">
+<section class="re-channel">
   <div class="channel-header">
     <p class="header-text">
-      重磅推荐<i>推</i>
+      重磅推荐<i class="text-icon">推</i>
     </p>
-    <div class="header-tab">
-      <a href="javascript:">男</a>
+    <div class="re-header-tab">
+      <a href="javascript:" class="current">男</a>
       <a href="javascript:">女</a>
     </div>
   </div>
@@ -23,9 +140,9 @@
           <p class="image-info">已完结</p>
         </div>
         <div class="cover-info">
-          <p class="info-title">书名</p>
+          <p class="info-title">书名99999999999999999999</p>
           <p class="info-author">作者</p>
-          <p class="info-summary">简介</p>
+          <p class="info-summary">阅尽天涯离别苦,不道归来,零落花如许。花底相看无一语,绿窗春与天俱莫。 待把相思灯下诉,一缕新欢,旧恨千千缕。最是人间留不住,朱颜辞镜花辞树.</p>
           <div class="info-tag">
             <span>标签</span>
             <ul class="tag-group"></ul>

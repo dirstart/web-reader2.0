@@ -8,3 +8,14 @@
 #### 2.`-webkit-tap-highlight-color: rgba(0, 0, 0);`使用之后就不会出现在某些浏览器上点击会有奇怪的高亮背景了。
 
 #### 3.写了几个月的less,使用antd和element,再写原始的css发现还真是不好维护。刀耕火种的时代啊
+
+#### 4.`background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.3));`放置于书籍封面图片上的已完成，白色的字体配上这样的背景色刚好可以突出其颜色，特别是当封面图也刚好是白色的时候。
+
+#### 5.多行文本换行省略号的方式,以下是两行的示例，不过不要加 `no-wrap`，否则会发现失去效果了，原因是不允许换行，则没有了两行以上的说法了.
+
+```
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+overflow: hidden;
+```
