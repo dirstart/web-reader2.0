@@ -19,3 +19,8 @@ display: -webkit-box;
 -webkit-line-clamp: 2;
 overflow: hidden;
 ```
+
+
+#### 进度更新，自我激励
+#### 2017.12.14 教程的代码确实写的不怎么好，并且这个也是个比较古老的教程。没有用到最新的框架，没有用到less，stylus那些css框架。
+![](https://raw.githubusercontent.com/dirstart/image_bed/master/web-reader1.png)
