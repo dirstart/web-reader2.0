@@ -84,7 +84,7 @@
     width: 100%;
     color: #fff;
     padding: 25px 7px 6px;
-    font: 10px/10px a;
+    font: 10px/10px arial;
     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.3));
   }
   .book-cover .cover-info {
@@ -122,6 +122,39 @@
     font: 12px/1.4em arial;
   }
   /* 这里是简介的部分，需要的是多行文字溢出 */
+  .book-cover .cover-info .info-tag {
+    margin-top: 10px;
+    padding-top: 3px;
+    overflow: hidden;
+  }
+  .book-cover .cover-info .tag-group {
+    float: left;
+    margin: -3px 7px 0 0;
+    padding: 3px 6px 2px;
+    max-width: 6em;
+    font: 10px/11px arial;
+    color: #53ac7d;
+    border: 1px solid #53ac7d;
+    border-radius: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .book-cover .cover-info .tag-group:last-child {
+    margin-right: 0;
+  }
+  .book-cover .n-book-order {
+    height: 15px;
+    float: left;
+    font: 13px/15px arial;
+    color: rgba(237, 83, 15, 0.9);
+  }
+  .book-cover .n-book-title {
+    margin-left: 27px;
+    height: 15px;
+    font: 15px/15px arial;
+    color: rgba(0, 0, 0, 0.9);
+  }
 </style>
 <section class="re-channel">
   <div class="channel-header">
@@ -145,18 +178,15 @@
           <p class="info-author">作者</p>
           <p class="info-summary">阅尽天涯离别苦,不道归来,零落花如许。花底相看无一语,绿窗春与天俱莫。 待把相思灯下诉,一缕新欢,旧恨千千缕。最是人间留不住,朱颜辞镜花辞树.</p>
           <div class="info-tag">
-            <span>标签</span>
-            <ul class="tag-group"></ul>
+            <div class="tag-group">标签</div>
           </div>
         </div>
       </div>
     </li>
     <li>
       <div class="book-cover no-image">
-        <span class="book-order">01</span>
-        <div class="cover-info">
-          <p class="info-title">书籍名称</p>
-        </div>
+        <p class="n-book-order">01</p>
+        <p class="n-book-title">老九门</p>
       </div>
     </li>
     <li></li>
