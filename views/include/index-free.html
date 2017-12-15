@@ -13,26 +13,55 @@
     font-weight: 400;
     color: #333;
   }
+  /* 在这里解决一下关于 display: inline-block 的间距问题 ; */
   .free-table {
+    margin-top: 10px;
     width: 100%;
     box-sizing: border-box;
+    font-size: 0;
+    letter-spacing: -4px;
+    word-spacing: -4px;
   }
   .free-table li {
-    width: 33.3%;
+    margin-bottom: 8px;
     display: inline-block;
+    width: 33.3%;
     vertical-align: top;
     line-height: 100%;
-    /*margin-right: -4px;*/
+    font-size: 16px;
+    word-spacing: normal;
+    letter-spacing: normal;
+  }
+  .f-cover-group {
+    width: 100%;
+    text-align: center;
   }
   .free-table .f-book-cover {
-/*    position: relative;
+    position: relative;
+    display: inline-block;
     width: 86px;
     height: 113px;
-    overflow: hidden;*/
+    overflow: hidden;
+    background-color: #eeece9;
+    box-shadow: 0px 6px 5px -3px #aaa;
+    border: 1px solid #f0f0f0;
+    border-bottom: none;
+    overflow: hidden;
   }
   .f-book-cover img {
     width: 100%;
     height: 100%;
+  }
+  .f-cover-group .f-book-info {
+    padding-top: 3px;
+  }
+  .f-cover-group .f-book-info h3 {
+    font-size: 13px;
+    line-height: 1.4em;
+    max-height: 2.8em;
+    overflow: hidden;
+    color: #8d8d8d;
+    margin-bottom: 0;
   }
 </style>
 
@@ -42,30 +71,40 @@
   </div>
   <ul class="free-table">
     <li>
-      <div class="f-book-cover">
-        <img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01dPLkOR74A/57udXizyRl6Oun.jpg!s" alt="">
-        <div class="free-tag"></div>
+      <div class="f-cover-group">
+        <div class="f-book-cover">
+          <img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01dPLkOR74A/57udXizyRl6Oun.jpg!s" alt="">
+          <div class="free-tag"></div>
+        </div>
+        <div class="f-book-info"><h3>书籍名称</h3></div>
       </div>
-      <div class="f-book-info"></div>
-    </li><li>
-      <div class="f-book-cover">
-        <img src="http://cover.read.duokan.com/mfsv2/download/s010/p01wTsEyyzYm/hLCNZHYcvGYGoW.jpg!s" alt="">
-        <div class="free-tag"></div>
-      </div>
-      <div class="f-book-info"></div>
-    </li><li>
-      <div class="f-book-cover">
-        <img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01z97zpz12P/EUgmVTWHXFh2To.jpg!s" alt="">
-        <div class="free-tag"></div>
-      </div>
-      <div class="f-book-info"></div>
     </li>
     <li>
-      <div class="f-book-cover">
-        <img src="http://cover.read.duokan.com/mfsv2/download/s010/p01B2O2f7y3i/qzzf79mAWessPg.jpg!s" alt="">
-        <div class="free-tag"></div>
+      <div class="f-cover-group">
+        <div class="f-book-cover">
+          <img src="http://cover.read.duokan.com/mfsv2/download/s010/p01wTsEyyzYm/hLCNZHYcvGYGoW.jpg!s" alt="">
+          <div class="free-tag"></div>
+        </div>
+        <div class="f-book-info"><h3>书籍名称</h3></div>
       </div>
-      <div class="f-book-info"></div>
+    </li>
+    <li>
+      <div class="f-cover-group">
+        <div class="f-book-cover">
+          <img src="http://cover.read.duokan.com/mfsv2/download/s010/p01B2O2f7y3i/qzzf79mAWessPg.jpg!s" alt="">
+          <div class="free-tag"></div>
+        </div>
+        <div class="f-book-info"><h3>书籍名称</h3></div>
+      </div>
+    </li>
+    <li>
+      <div class="f-cover-group">
+        <div class="f-book-cover">
+          <img src="http://cover.read.duokan.com/mfsv2/download/s010/p01B2O2f7y3i/qzzf79mAWessPg.jpg!s" alt="">
+          <div class="free-tag"></div>
+        </div>
+        <div class="f-book-info"><h3>书籍名称</h3></div>
+      </div>
     </li>
   </ul>
   <a href="/free" class="free-footer">更多限免佳作</a>

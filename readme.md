@@ -40,6 +40,24 @@ overflow: hidden;
 </ul>
 ```
 在我看来，这是一种滑稽的解决方案。
+解决方案三.将父元素的字体设置为 `font-size:0`，因为这种bug本质出现的原因是行间距为4px.
+据说方法三在Safari上依旧是有问题的。
+解决方案四.全兼容的解决方案.(复制于https://www.cnblogs.com/871735097-/p/4739114.html)
+```
+.finally-solve {
+  letter-spacint: -4px;
+  word-spacint: -4px;
+  font-size: 0;
+}
+.finally-solve li {
+  font-size: 16px;
+  letter-spcing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  zoom: 1;
+}
+```
+#### 8.小书籍下面的隐隐特效 `box-shadow: 0px 6px 5px -3px #aaa;`配合`border: 1px solid #f0f0f0;border-bottom: none;` 还是非常好看的
 
 *  *  *
 
