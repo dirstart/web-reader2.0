@@ -1,8 +1,72 @@
 <style>
-  
+  .channel-free {
+    position: relative;
+  }
+  .free-header {
+    position: relative;
+    padding: 10px 14px;
+    border: 1px solid #f0f0f0;
+    border-left: 6px solid #ffab18;
+  }
+  .free-header-title {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+  }
+  .free-table {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .free-table li {
+    width: 33.3%;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 100%;
+    /*margin-right: -4px;*/
+  }
+  .free-table .f-book-cover {
+/*    position: relative;
+    width: 86px;
+    height: 113px;
+    overflow: hidden;*/
+  }
+  .f-book-cover img {
+    width: 100%;
+    height: 100%;
+  }
 </style>
 
-<section>
-  <div class="free-header"></div>
-  <div class="free-body"></div>
+<section class="channel-free">
+  <div class="free-header">
+    <h2 class="free-header-title">限时免费</h2>
+  </div>
+  <ul class="free-table">
+    <li>
+      <div class="f-book-cover">
+        <img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01dPLkOR74A/57udXizyRl6Oun.jpg!s" alt="">
+        <div class="free-tag"></div>
+      </div>
+      <div class="f-book-info"></div>
+    </li><li>
+      <div class="f-book-cover">
+        <img src="http://cover.read.duokan.com/mfsv2/download/s010/p01wTsEyyzYm/hLCNZHYcvGYGoW.jpg!s" alt="">
+        <div class="free-tag"></div>
+      </div>
+      <div class="f-book-info"></div>
+    </li><li>
+      <div class="f-book-cover">
+        <img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01z97zpz12P/EUgmVTWHXFh2To.jpg!s" alt="">
+        <div class="free-tag"></div>
+      </div>
+      <div class="f-book-info"></div>
+    </li>
+    <li>
+      <div class="f-book-cover">
+        <img src="http://cover.read.duokan.com/mfsv2/download/s010/p01B2O2f7y3i/qzzf79mAWessPg.jpg!s" alt="">
+        <div class="free-tag"></div>
+      </div>
+      <div class="f-book-info"></div>
+    </li>
+  </ul>
+  <a href="/free" class="free-footer">更多限免佳作</a>
 </section>

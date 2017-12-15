@@ -65,6 +65,13 @@ router.get('/rank', (req, res) => {
 	})
 });
 
+// 更多免费
+router.get('/free', (req, res) => {
+	res.render('free', {
+		title: "免费"
+	});
+});
+
 router.get('/book', (req, res) => {
 	res.setHeader('Cache-Control', 'no-cache');
 	let params = qs.parse(req._parsedUrl.query);

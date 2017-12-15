@@ -23,8 +23,27 @@ overflow: hidden;
 
 #### 6.采用阿里icon-font作为图标，不得不说，icon-font做的让人很容易入手，不过关于svg部分自己尚未了解，准备近期入手。直接放在此项目上的时候在定位上出了一些错误。
 
+#### 7.遇见了第一个实习公司遇到的`display:inline-block`的问题，又复习了一遍。当有这么一个结构--- 
+```
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+```
+如果我们设置每一个 ul li 为  ` display: inline-block ; width: 33.3% `的时候，这个时候第三个还是会被挤到第二排，因为多处的那个 4px。
+> 解决方案一.我们可以发现我们是可以用`margin-right:-4px`这一行代码解决的。然而这种解决方案并不完美。下回来仔细讨论一下。
+解决方案二.写成
+```
+<ul>
+  <li></li><li></li><li></li>
+</ul>
+```
+在我看来，这是一种滑稽的解决方案。
+
 *  *  *
 
 #### 进度更新，自我激励
 #### 2017.12.14 教程的代码确实写的不怎么好，并且这个也是个比较古老的教程。没有用到最新的框架，没有用到less，stylus那些css框架。
 ![](https://raw.githubusercontent.com/dirstart/image_bed/master/web-reader1.png)
+
